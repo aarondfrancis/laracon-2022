@@ -14,5 +14,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $inspire = function () {
+        \Illuminate\Support\Facades\Artisan::call('inspire');
+
+        return \Illuminate\Support\Facades\Artisan::output();
+    };
+
+    $results = \Hammerstone\Sidecar\PHP\LaravelLambda::executeMany([
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+        $inspire, $inspire, $inspire, $inspire, $inspire,
+    ]);
+
+    return collect($results)->map->body()->implode('<br>');
 });

@@ -6,12 +6,15 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
+        "brianium/paratest": "^6.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "hammerstone/sidecar": "dev-main",
+        "hammerstone/sidecar": "v0.3.7",
+        "hammerstone/sidecar-php": "^0.0.2",
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
-        "laravel/tinker": "^2.5"
+        "laravel/tinker": "^2.5",
+        "wnx/sidecar-browsershot": "dev-main"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
